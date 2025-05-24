@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Building Schedule</title>
+  <link rel="stylesheet" href="CCSNewBuildingSchedule.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <button class="menu-btn">&#9776;</button>
+    </div>
+    <div class="nav-right">
+      <a href="/SDS-main/TeacherMenu/TeacherMenu.html">
+        <button class="back-btn">&#8592;</button>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="header-box">
+      <div class="lab-title">Schedule</div>
+      <div class="building-name">CCS NEW BUILDING</div>
+    </div>
+
+    <!-- Lab Selection Buttons -->
+    <div class="room-grid">
+        <button class="room-btn" onclick="goToRoom('Room 1')">Room 1</button>
+        <button class="room-btn" onclick="goToRoom('Room 2')">Room 2</button>
+        <button class="room-btn" onclick="goToRoom('Room 3')">Room 3</button>
+        <button class="room-btn" onclick="goToRoom('Lec 13')">Lec 13</button>
+      
+        <button class="room-btn" onclick="goToRoom('Lec 8')">Lec 8</button>
+        <button class="room-btn" onclick="goToRoom('Lec 7')">Lec 7</button>
+        <button class="room-btn" onclick="goToRoom('Lec 11')">Lec 11</button>
+        <button class="room-btn" onclick="goToRoom('Lec 12')">Lec 12</button>
+      
+        <button class="room-btn" onclick="goToRoom('Faculty')">Faculty</button>
+        <button class="room-btn" onclick="goToRoom('Deans Office')">Deans Office</button>
+        <button class="room-btn" onclick="goToRoom('Room 4')">Room 4</button>
+        <button class="room-btn" onclick="goToRoom('Lec 4')">Lec 4</button>
+      </div>
+      
+  </main>
+
+  <script>
+
+    function goToRoom(roomName) {
+      window.location.href = `UserScheduleNB.html?room=${encodeURIComponent(roomName)}`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../TeacherMenu/TC_MenuStyle.css" />
+</head>
+<body>
+  <header class="flex items-center justify-between bg-gray-600 p-4">
+    <button aria-label="Menu" class="text-black text-4xl leading-none">
+      <i class="fas fa-bars"></i>
+    </button>
+    <a href="../TeacherLogin/teacher.html" aria-label="Back" class="back-button">
+      <svg class="back-icon" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </a>
+  </header>
+
+ <main class="p-4 space-y-4 max-w-md mx-auto">
+  <div>
+    <a href="../TeacherInbox/TeacherInbox.html">
+      <button class = "menu-btn" type = "button">
+        <img src="../icons/inbox.jpg" class="w-12 h-12"/>
+        <span>Inbox</span>
+      </button>
+    </a>
+  </div>
+
+    <div>
+      <a href="../ContactAdmin/ContactAdmin.html">
+        <button class="menu-btn" type="button">
+          <img src="../icons/phone.png" class="w-12 h-12"/>
+          <span>Contact Admin</span>
+        </button>
+      </a>
+    </div>
+
+
+    <div class="building-buttons">
+      <a href="../TeacherSchedule/CCS_OldBldg/CCSOldBuildingSchedule.html">
+        <button class="building old selected">OLD BUILDING</button>
+      </a>
+      <a href="../TeacherSchedule//CCS_NewBldg/CCSNewBuildingSchedule.html">
+        <button class="building new">NEW BUILDING</button>
+      </a>
+    </div>
+
+ </main>
+</body>
+</html>

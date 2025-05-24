@@ -1,0 +1,102 @@
+/* Body */
+body {
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Back button */
+  .back-button {
+    position: absolute;
+    top: 8px;
+    left: 6px;
+    background-color: black;
+    border-radius: 9999px;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Content container */
+  .content-container {
+    margin-top: 128px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+    padding: 0 24px;
+  }
+  
+  /* Title and subtitle */
+  .title {
+    margin-top: 24px;
+    font-weight: 800;
+    color: black;
+    font-size: 3rem;
+    line-height: 1;
+  }
+  
+  .subtitle {
+    margin-top: 4px;
+    color: black;
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  
+  /* Form */
+  .login-form {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  /* Input field */
+  .input-field {
+    width: 100%;
+    border-radius: 9999px;
+    border: 1px solid black;
+    padding: 12px 24px;
+    font-size: 1.125rem;
+    color: #4a4a4a;
+    outline: none;
+  }
+  
+  .input-field::placeholder {
+    color: gray;
+    opacity: 1; 
+  }
+  
+  /* Forgot password link */
+  .forgot-password-link {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Login button */
+  .login-button {
+    width: 170px;
+    border-radius: 30px;
+    text-align: center;
+    border: 1px solid black;
+    padding: 12px 24px;
+    font-size: 1.125rem;
+    color: black;
+    background-color: white;
+    transition: background-color 0.3s;
+  }
+  
+  .login-button:hover {
+    background-color: #f0f0f0;
+  }
+  

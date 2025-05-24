@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    background-color: #ffffff;
+  }
+  
+  /* Header styles */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4b5563; /* Tailwind gray-600 */
+    padding: 0.75rem; /* p-3 */
+  }
+  
+  /* Menu icon button */
+  .menu-button {
+    font-size: 1.875rem; /* text-3xl = 30px */
+    color: #1f2937; /* Tailwind gray-900 */
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Back button */
+  .back-button {
+    width: 3.5rem; /* w-14 = 56px */
+    height: 2.5rem; /* h-10 = 40px */
+    background-color: #ffffff;
+    border-radius: 9999px; /* rounded-full */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .back-button i {
+    font-size: 1.25rem; /* text-xl = 20px */
+    color: #000000;
+  }
+  
+  /* Main container */
+  .main {
+    padding: 1.5rem; /* p-6 = 24px */
+  }
+  
+  /* Title */
+  .title {
+    text-align: center;
+    font-size: 2.25rem; /* text-4xl = 36px */
+    margin-bottom: 1.5rem; /* mb-6 = 24px */
+  }
+  
+  /* Inbox card */
+  .inbox-card {
+    border: 2px solid #000000;
+    border-radius: 1rem; /* rounded-2xl = 16px */
+    padding: 1.5rem; /* p-6 = 24px */
+    max-width: 36rem; /* max-w-xl = 576px */
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Message text */
+  .message-title,
+  .message-body {
+    font-size: 1.25rem; /* text-xl = 20px */
+  }
+  
+  .message-title {
+    margin-bottom: 1.5rem; /* mb-6 = 24px */
+  }
+  
+  .message-body {
+    margin-bottom: 2rem; /* mb-8 = 32px */
+  }
+  
+  /* Button group */
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* gap-6 = 24px */
+  }
+  
+  /* Reply button */
+  .reply-button {
+    font-size: 1.25rem; /* text-xl = 20px */
+    padding: 0.5rem 2rem; /* py-2 px-8 = 8px 32px */
+    border-radius: 9999px; /* rounded-full */
+    border: 2px solid #000000;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  /* Send OTP button */
+  .otp-button {
+    font-size: 1.25rem; /* text-xl */
+    padding: 0.5rem 2rem; /* py-2 px-8 */
+    border-radius: 9999px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+  }

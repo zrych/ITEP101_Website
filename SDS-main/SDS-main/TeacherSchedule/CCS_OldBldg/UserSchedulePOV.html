@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Lab Schedule</title>
+  <link rel="stylesheet" href="UserSchedulePOVStyle.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <button class="menu-btn">&#9776;</button>
+    </div>
+    <div class="nav-right">
+      <button class="back-btn" onclick="goBack()">&#8592;</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="header-box">
+      <div class="lab-title" id="room-label">MY LAB SCHEDULE</div>
+      <div class="day-title" id="day-label">MONDAY</div>
+      <div class="arrow-buttons">
+        <button class="day-arrow" id="prev-day">&#8592;</button>
+        <button class="day-arrow" id="next-day">&#8594;</button>
+      </div>
+    </div>
+
+    <!-- Schedule Box -->
+    <div class="schedule-box" id="schedule-content">
+      <!-- Populated by JavaScript -->
+    </div>
+  </main>
+
+  <script>
+    const days = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"];
+    let currentIndex = 0;
+
+    const dayLabel = document.getElementById("day-label");
+    const roomLabel = document.getElementById("room-label");
+    const scheduleBox = document.getElementById("schedule-content");
+
+    // Full 11‑row schedule for each day (could be customized later)
+    const defaultSchedule = [
+      { time: "7:00AM - 8:00AM",   professor: "Professor A" },
+      { time: "8:00AM - 9:00AM",   professor: "Professor B" },
+      { time: "9:00AM - 10:00AM",  professor: "Professor C" },
+      { time: "10:00AM - 11:00AM", professor: "Professor D" },
+      { time: "11:00AM - 12:00PM", professor: "Professor E" },
+      { time: "12:00PM - 1:00PM",  professor: "Professor F" },
+      { time: "1:00PM - 2:00PM",   professor: "Professor G" },
+      { time: "2:00PM - 3:00PM",   professor: "Professor H" },
+      { time: "3:00PM - 4:00PM",   professor: "Professor I" },
+      { time: "4:00PM - 5:00PM",   professor: "Professor J" },
+      { time: "5:00PM - 6:00PM",   professor: "Professor K" },
+    ];
+
+    // Schedule mapping: room → day → array
+    const schedules = {
+      "Lec 1": {
+        "MONDAY":    defaultSchedule,
+        "TUESDAY":   defaultSchedule,
+        "WEDNESDAY": defaultSchedule,
+        "THURSDAY":  defaultSchedule,
+        "FRIDAY":    defaultSchedule,
+      },
+      "Lec 2": {
+        "MONDAY":    defaultSchedule,
+        "TUESDAY":   defaultSchedule,
+        "WEDNESDAY": defaultSchedule,
+        "THURSDAY":  defaultSchedule,
+        "FRIDAY":    defaultSchedule,
+      },
+      "Lab 6": {
+        "MONDAY":    defaultSchedule,
+        "TUESDAY":   defaultSchedule,
+        "WEDNESDAY": defaultSchedule,
+        "THURSDAY":  defaultSchedule,
+        "FRIDAY":    defaultSchedule,
+      },
+      // Add other rooms here
+    };
+
+    // Render the schedule for a given room & day
+    function renderSchedule(room, day) {
+      roomLabel.textContent = `${room} SCHEDULE`;
+      dayLabel.textContent = day;
+
+      scheduleBox.innerHTML = ""; // Clear previous content
+
+      const list = (schedules[room] && schedules[room][day]) || defaultSchedule;
+      list.forEach(({time, professor}) => {
+        const row = document.createElement("div");
+        row.className = "schedule-row";
+        row.innerHTML = `<span>${time}</span><span>${professor}</span>`;
+        scheduleBox.appendChild(row);
+      });
+    }
+
+    // Get the room from URL
+    const params = new URLSearchParams(window.location.search);
+    const room = params.get("room") || "Lec 1";
+    currentIndex = 0;
+
+    // Initial render
+    renderSchedule(room, days[currentIndex]);
+
+    // Day navigation
+    document.getElementById("next-day").onclick = () => {
+      currentIndex = (currentIndex + 1) % days.length;
+      renderSchedule(room, days[currentIndex]);
+    };
+
+    document.getElementById("prev-day").onclick = () => {
+      currentIndex = (currentIndex - 1 + days.length) % days.length;
+      renderSchedule(room, days[currentIndex]);
+    };
+
+    function goBack() {
+  window.location.href = "CCSOldBuildingSchedule.html";
+}
+
+  </script>
+
+</body>
+</html>

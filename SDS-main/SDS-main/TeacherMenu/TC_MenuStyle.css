@@ -1,0 +1,63 @@
+.back-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 16px;
+  height: 48px;
+  width: 64px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.back-icon {
+  height: 24px;
+  width: 24px;
+  color: black;
+}
+
+.building-buttons {
+  margin-top: 40px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  width: 100%;
+}
+
+.building {
+  padding: 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: 2px solid black;
+  background-color: white;
+  cursor: pointer;
+}
+
+.old.selected {
+  background-color: #999;
+  color: white;
+  border: 2px solid #666;
+}
+
+.new.selected {
+  background-color: #999;
+  color: white;
+  border: 2px solid #666;
+}
+
+.menu-btn {
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 1rem;
+  padding: 0.75rem 1rem;
+  width: 90%;
+  gap: 1rem; /* instead of space-x-4 */
+  background-color: white;
+}
+
+.menu-btn span {
+  font-size: 1.5rem; /* text-2xl */
+  color: black;
+}

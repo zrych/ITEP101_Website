@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Building Schedule</title>
+  <link rel="stylesheet" href="CCSOldBuildingScheduleStyle.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <button class="menu-btn">&#9776;</button>
+    </div>
+    <div class="nav-right">
+      <button class="back-btn" onclick="goBack()">&#8592;</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="header-box">
+      <div class="lab-title">Schedule</div>
+      <div class="building-name">CCS OLD BUILDING</div>
+    </div>
+
+    <!-- Lab Selection Buttons -->
+    <div class="room-grid">
+      <button class="room-btn" onclick="goToRoom('Lec 1')">Lec 1</button>
+      <button class="room-btn" onclick="goToRoom('Lec 2')">Lec 2</button>
+      <button class="room-btn" onclick="goToRoom('Lab 6')">Lab 6</button>
+      <button class="room-btn" onclick="goToRoom('Lab 5')">Lab 5</button>
+      <button class="room-btn" onclick="goToRoom('Lab 1')">Lab 1</button>
+      <button class="room-btn" onclick="goToRoom('Lab 2')">Lab 2</button>
+      <button class="room-btn" onclick="goToRoom('Lab 3')">Lab 3</button>
+      <button class="room-btn" onclick="goToRoom('Lab 4')">Lab 4</button>
+    </div>
+  </main>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+    function goToRoom(roomName) {
+      window.location.href = `UserSchedulePOV.html?room=${encodeURIComponent(roomName)}`;
+    }
+  </script>
+</body>
+</html>

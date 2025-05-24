@@ -1,0 +1,157 @@
+/* ================== NAVBAR ================== */
+.navbar {
+    background-color: #808080;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Menu button (left side of navbar) */
+.menu-btn {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+/* Back button (right side of navbar) */
+.back-btn {
+    background-color: white;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    color: black;
+}
+
+/* ================== MAIN CONTENT ================== */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* ================== HEADER ================== */
+.header-box {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* "My Lab Schedule" title styling */
+.lab-title {
+    display: block;
+    background: #333;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Day label styling (e.g. MONDAY) */
+.day-title {
+    margin-top: 10px;
+    background: #222;
+    color: white;
+    padding: 10px 0;
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    width: 150px;
+    text-align: center;
+}
+
+/* ================== SCHEDULE BOX ================== */
+/* ================== SCHEDULE BOX ================== */
+.schedule-box {
+    border: 1px solid #000;                     /* Outline */
+    border-radius: 10px;                        /* Rounded corners */
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);   /* Soft shadow */
+    margin-top: 10px;
+    padding: 15px;                              /* Restore padding */
+    background-color: #fff;                     /* Ensure contrast */
+}
+
+/* ================== SCHEDULE ROW ================== */
+.schedule-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px dotted #ccc;
+}
+
+/* ================== EDIT BUTTON ================== */
+.edit-btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.edit-btn {
+    padding: 6px 15px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    flex: 1;
+}
+
+/* Hover effect for edit buttons */
+.edit-btn:hover {
+    background-color: #ddd;
+}
+
+/* ================== ARROW BUTTONS ================== */
+.arrow-buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.day-arrow {
+    background-color: white;
+    border: 1px solid #333;
+    border-radius: 5px;
+    width: 40px;
+    height: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+}
+
+/* ================== HIGHLIGHTED TEXT IN EDIT MODE ================== */
+.schedule-row span[contenteditable="true"] {
+    background-color: #f0f8ff;
+    border-bottom: 1px dashed #000;
+    outline: none;
+}
+
+
+/* Grid header row */
+.schedule-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.schedule-row span {
+    font-size: 16px;
+}

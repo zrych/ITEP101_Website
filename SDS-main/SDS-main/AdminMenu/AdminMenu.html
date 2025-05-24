@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Menu Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../AdminMenu/AdminMenuStyle.css">
+</head>
+<body class="bg-white font-sans">
+  <header class="flex items-center justify-between bg-gray-600 p-4">
+    <button aria-label="Menu" class="text-black text-4xl leading-none">
+      <i class="fas fa-bars"></i>
+    </button>
+    <a href="../AdminLogin/admin.html">
+      <!-- dont remove // hwag galawin hehehhehe-->
+    <button aria-label="Back" class="flex items-center justify-center border-2 border-black rounded-full w-14 h-10 bg-gray-300">
+      <i class="fas fa-arrow-left text-black text-2xl"></i>
+    </button>
+    </a>
+  </header>
+
+  <main class="p-4 space-y-4 max-w-md mx-auto">
+    <div>
+      <a href="">
+        <button class="menu-btn" type="button">
+          <img src="../icons/inbox.jpg" class="w-12 h-12"/>
+          <span>Inbox</span>
+        </button>
+      </a>
+    </div>
+
+<div>
+<a href="../AdminAttendance/Ad_Attendance.html">
+    <button class="menu-btn" type="button">
+      <img src="../icons/attendance.jpg" class="w-12 h-12"/>
+      <span>Attendance</span>
+    </button>
+</a>
+</div>
+
+<div>
+<a href="../AdminSchedule/AdminSchedule.html">
+    <button class="menu-btn" type="button">
+      <img src="../icons/schedule.jpg" class="w-12 h-12"/>
+      <span>Schedule</span>
+    </button>
+</a>
+</div>
+
+    <button class="menu-btn" type="button">
+      <img src="../icons/history.jpg" class="w-12 h-12"/>
+      <span>History</span>
+    </button>
+
+    <div>
+      <a href="../AdminLockdown/Lockdown.html">
+        <button class="menu-btn" type="button">
+            <img src="../icons/lockdown.jpg" class="w-12 h-12"/>
+          <span>Lockdown</span>
+        </button>
+      </a>
+    </div>
+
+  </main>
+</body>
+</html>

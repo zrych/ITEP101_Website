@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attendance Page</title>
+  <link rel="stylesheet" href="../AdminAttendance/Ad_Attendancestyle.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="top-bar">
+    <a href="../AdminMenu/AdminMenu.html" class="back-button">
+      <i class="fas fa-arrow-left"></i>
+    </a>
+  </div>
+
+  <main class="main-container">
+    <div class="class-header">
+      <div class="class-name">BS INFO TECH-1A</div>
+    </div>
+
+    <div class="cards-container">
+     <!-- Teacher Attendance -->
+<div class="teacher-card">
+    <p class="card-title">Teacher Attendance</p>
+    <label class="checkbox-label">
+      <input type="checkbox" />
+      <input type="text" class="name-input" value="Professor xyz" />
+    </label>
+  </div>
+  
+  <!-- Student Attendance -->
+  <div class="student-card">
+    <p class="card-title">Student Attendance</p>
+    <ul id="studentList" class="student-list">
+      <li><label><input type="checkbox" /> <input type="text" class="name-input" value="Student 1" /></label></li>
+      <li><label><input type="checkbox" /> <input type="text" class="name-input" value="Student 2" /></label></li>
+      <li><label><input type="checkbox" /> <input type="text" class="name-input" value="Student 3" /></label></li>
+      <li><label><input type="checkbox" /> <input type="text" class="name-input" value="Student 4" /></label></li>
+      <li><label><input type="checkbox" /> <input type="text" class="name-input" value="Student 5" /></label></li>
+    </ul>
+  
+    <div class="add-student">
+        <button id="addStudentBtn">Add</button>
+        <input type="text" id="newStudent" placeholder="New student name" />
+      </div>
+        <!-- Students appear here -->
+      </ul>
+  </div>
+
+  <div class="lab-info">
+    <input type="text" class="lab-box" id="labInput" value="LAB 1" />
+    <input type="date" class="lab-box" id="dateInput" />
+    <input type="time" class="lab-box" id="timeInput" />
+  </div>
+  
+  </main>
+
+  <script src="../AdminAttendance/Ad_Attendance.js"></script>
+
+</body>
+</html>

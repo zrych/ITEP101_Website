@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab Schedule</title>
+  <link rel="stylesheet" href="AdminScheduleStyle.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <button class="menu-btn">&#9776;</button>
+    </div>
+    <div class="nav-right">
+      <a href="../AdminMenu/AdminMenu.html">
+        <button class="back-btn">&#8592;</button>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="container">
+    <!-- Titles -->
+    <div class="header-box">
+      <div class="lab-title">LAB 1 SCHEDULE</div>
+      <div class="day-title">MONDAY</div>
+      <div class="arrow-buttons">
+        <button class="day-arrow" id="prev-day">&#8592;</button>
+        <button class="day-arrow" id="next-day">&#8594;</button>
+      </div>
+    </div>
+
+    <!-- Schedule Box -->
+    <div class="schedule-box" id="schedule-content">
+      <div class="schedule-row"><span>7:00AM - 8:00AM</span><span>Professor xyz</span></div>
+      <div class="schedule-row"><span>8:00AM - 9:00AM</span><span>Professor xyz</span></div>
+      <div class="schedule-row"><span>9:00AM - 10:00AM</span><span>Professor xyz</span></div>
+      <div class="schedule-row"><span>10:00AM - 11:00AM</span><span>Professor xyz</span></div>
+      <div class="schedule-row"><span>11:00AM - 12:00PM</span><span>Professor xyz</span></div>
+      <div class="schedule-row"><span>12:00PM - 1:00PM</span><span>Professor xyz</span></div>
+      <div class="schedule-row"><span>1:00PM - 2:00PM</span><span>Professor xyz</span></div>
+      <div class="schedule-row"><span>2:00PM - 3:00PM</span><span>Professor xyz</span></div>
+      <div class="schedule-row"><span>3:00PM - 4:00PM</span><span>Professor xyz</span></div>
+      <div class="schedule-row"><span>4:00PM - 5:00PM</span><span>Professor xyz</span></div>
+      <div class="schedule-row"><span>5:00PM - 6:00PM</span><span>Professor xyz</span></div>
+    </div>
+
+    <!-- Edit Button -->
+    <div class="edit-btn-container">
+      <button class="edit-btn">Edit Schedule</button>
+    </div>
+  </main>
+
+  <!-- Day Panel & Schedule Editor -->
+  <script>
+    const days = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"];
+    let currentIndex = 0;
+
+    const dayTitle = document.querySelector(".day-title");
+    const scheduleRows = document.querySelectorAll(".schedule-row span");
+    const editBtn = document.querySelector(".edit-btn");
+
+    document.getElementById("next-day").addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % days.length;
+      dayTitle.textContent = days[currentIndex];
+    });
+
+    document.getElementById("prev-day").addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + days.length) % days.length;
+      dayTitle.textContent = days[currentIndex];
+    });
+
+    let editing = false;
+
+    editBtn.addEventListener("click", () => {
+      editing = !editing;
+      scheduleRows.forEach(span => {
+        span.contentEditable = editing;
+      });
+      editBtn.textContent = editing ? "Save" : "Edit Schedule";
+    });
+  </script>
+</body>
+</html>

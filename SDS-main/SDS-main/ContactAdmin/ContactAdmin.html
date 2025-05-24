@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Admin</title>
+  <link rel="stylesheet" href="ContactAdminStyle.css" />
+</head>
+<body class="body">
+  <header class="top-bar">
+    <div class="spacer"></div>
+    <a href="../TeacherMenu/TeacherMenu.html" aria-label="Back" class="back-button">
+      <svg class="back-icon" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </a>
+  </header>
+
+  <main class="main-content">
+    <div class="content-container">
+      <h1 class="title">Contact Admin</h1>
+      <textarea id="messageBox" aria-label="Contact Admin message" class="message-box"></textarea>
+      <div class="button-container">
+        <button class="send-button" onclick="sendMessage()">Send</button>
+      </div>
+    </div>      
+  </main>  
+
+  <script>
+    function sendMessage() {
+      const message = document.getElementById("messageBox").value.trim();
+      if (message) {
+        // Save to local storage (append to existing messages)
+        let messages = JSON.parse(localStorage.getItem("adminMessages")) || [];
+        messages.push({ text: message, timestamp: new Date().toISOString() });
+        localStorage.setItem("adminMessages", JSON.stringify(messages));
+        
+        alert("Message sent succesfully!");
+        document.getElementById("messageBox").value = '';
+      } else {
+        alert("Please enter a message before sending.");
+      }
+    }
+  </script>
+</body>
+</html>

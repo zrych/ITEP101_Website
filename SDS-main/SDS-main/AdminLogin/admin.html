@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="adminstyle.css">   
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>SDS Login</title>
+  <link href="styles.css" rel="stylesheet"/>
+   <!-- dont remove // scripts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  
+</head>
+<body class="bg-white min-h-screen flex flex-col items-center justify-start relative overflow-hidden">
+  <a href="../INDEX/index.html">
+    <button aria-label="Back" class="back-button">
+      <i class="fas fa-arrow-left text-white text-xl"></i>
+    </button>
+  </a>
+  <div class="content-container">
+    <img src="Images/school-logo.png" alt="">
+    <h1 class="title">SDS</h1>
+    <p class="subtitle">Smart Door Security</p>
+    <form class="login-form">
+         <!-- pass admin -->
+      <input class="input-field" placeholder="Admin Password" type="password"/>
+       <!-- forgot pass -->
+      <div class="forgot-password-link">
+        <a class="text-gray-600 text-base" href="#">Forgot password?</a>
+      </div>
+       <!-- login -->
+       <a href="../AdminMenu/AdminMenu.html" class="login-button">Log In</a>
+    </form>
+  </div>
+</body>
+</html>

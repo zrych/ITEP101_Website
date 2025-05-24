@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lock Down</title>
+  <link rel="stylesheet" href="../AdminLockdown/LockdownStyle.css" />
+  <script defer>
+    function showConfirmation() {
+      document.getElementById("confirmation-box").style.display = "flex";
+    }
+
+    function hideConfirmation() {
+      document.getElementById("confirmation-box").style.display = "none";
+    }
+
+    function confirmLockdown() {
+      alert("Lockdown activated!");
+      hideConfirmation();
+    }
+  </script>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="menu-icon">☰</div>
+    <button class="back-btn" onclick="window.history.back()">←</button>
+  </div>
+
+  <div class="main-content">
+    <img src="../icons/lockdown.jpg" alt="Lock" class="lock-icon" style="width: 300px; height: auto;" />
+
+    <h2>Lock Down</h2>
+    <button class="activate-btn" onclick="showConfirmation()">Activate</button>
+  </div>
+
+  <div id="confirmation-box" class="confirmation-box">
+    <img src="../icons/lockdown.jpg" alt="Lock Blurred" class="lock-icon blurred" />
+    <p>Are you sure?</p>
+    <div class="button-group">
+        <a href="../AdminLockdown/LockdownRooms.html">
+            <button onclick="confirmLockdown()">Yes</button>
+        </a>  
+
+      <button onclick="hideConfirmation()">No</button>
+    </div>
+  </div>
+</body>
+</html>

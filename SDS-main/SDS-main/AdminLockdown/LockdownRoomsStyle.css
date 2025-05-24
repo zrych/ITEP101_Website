@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fff;
+  }
+  
+  .top-bar {
+    background-color: #4b5563;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+  }
+  
+  .menu-icon, .back-btn {
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .status-card, .grid-card {
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+  }
+  
+  .lock-icon {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .status-text {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  .room-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  .column {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(4, 60px);
+    gap: 5px;
+  }
+  
+  .room {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .red {
+    background-color: red;
+    color: white;
+  }
+  
+  .empty {
+    background-color: white;
+    border: 1px solid #ccc;
+  }
+  
+  .success-text {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
